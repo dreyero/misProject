@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music City Audiology</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="icon" type="image/x-icon" href="../images/MCALogo.png">
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "pzqXQfR737hiFD8Qw",
+      });
+   })();
+</script>
+</head>
+
+
+<body>
+    <div class="container-header">
+        <h1>
+            <ul>
+                <li><a href="../pages/homePage.html">Home</a></li>
+                <li><a href="../pages/FAQPage.html">FAQs</a></li>
+                <div class="spacer"></div> <!-- Spacer div -->
+                <h1>Music City Audiology</h1> <!-- Header text between Contact Us and Scheduling -->
+                <div class="spacer"></div> <!-- Spacer div -->
+                <li><a href="../pages/scheduling.html">Scheduling</a></li>
+                <li><a href="./signin.html">Sign In</a></li>
+            </ul>
+        </h1>
+    </div>
+    <div class="MCALogo">
+        <img src="../images/MCALogo.jpeg" alt="Music City Audiology Logo">
+    </div>
+    <div class="container">
+
+        <div class="textbox">
+            <h2>Jason Baker, Au.D.</h2>
+            <h3>Doctor of Audiology</h3>
+            <p>With busy and sometimes irregular schedules, I know it can be difficult to access ear and hearing health
+                services. MCA was created in order to provide more convenient and accessible services.</p>
+            <p>Music Industry Professionals (MIPs), I know first hand how important your ears are for understanding,
+                creating, and performing music. As a music audiologist, my goal is to advocate for you and your ears.
+                Let me help protect your passion, career, and livelihood.</p>
+            <p>For those with hearing loss, treatment options can be difficult to navigate, use, and maintain. Without
+                functioning devices, individuals can truly struggle with daily tasks. As a hearing aid expert, I can
+                help restore your communication needs.</p>
+        </div>
+
+        <div class="contact-form">
+            <h2>Contact Us</h2>
+        <!-- I have to take out the form tag for the email to be sent and I had to move the homePage.js out of the resources
+            folder to connect the javascript, but we can figure out to fix that - Davin Hoang  -->
+                <input type="text" id="name" name="name" placeholder="Name (Required)" required>
+                <input type="email" id="email" name="email" placeholder="Email (Required)" required>
+                <textarea name="message" id="message" placeholder="Message (Required)" rows="4" required></textarea>
+                <div id="contactUsForm">
+                    <button onclick="contactUs()" type="submit">Send Message</button>
+                </div>
+                
+        </div>
+
+        <div class="doctorImage">
+            <img src="../images/JasonBaker.jpeg" alt="Dr. Jason Baker">
+        </div>
+    </div>
+    <div class="services-container">
+        <div class="service-box">
+            <h3>Hearing Aids</h3>
+            <p>Let’s discuss the technology available and find a solution that is right for you</p>
+        </div>
+        <div class="service-box">
+            <h3>Earmold Impressions</h3>
+            <p>Great for musicians looking for in-ear monitors</p>
+        </div>
+        <div class="service-box">
+            <h3>Custom Hearing Protection</h3>
+            <p>Keep those ears safe. Specialized products for musicians/concert-goers, swimmers, hunters, travelers, motorcyclists, mechanics/construction workers</p>
+        </div>
+        <div class="service-box">
+            <h3>Ear Canal Cleaning</h3>
+            <p>Don’t let those ear canals get plugged up. Cerumen (earwax) removal is a normal part of ear management and will assist in keeping your devices clean and functioning properly</p>
+        </div>
+        <div class="service-box">
+            <h3>Device Cleaning & Troubleshooting</h3>
+            <p>Let’s make sure your devices are working at their best. Services include cleaning, connectivity, and proper use of all ear-related devices including hearing aids, hearing protection & in-ear monitors</p>
+        </div>
+        <div class="service-box">
+            <h3>Audiology Consults</h3>
+            <p>Curious about your hearing? Schedule a consult today. This will include a comprehensive hearing exam, comprehensive review of the results, and a discussion of devices that are tailored to your exact needs</p>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer class="container-footer">
+        <div class="footer-social">
+            <h1>Check Out Our Socials!</h1>
+            <a href="https://www.instagram.com/musiccityaudiology/?igshid=YmMyMTA2M2Y%3D" target="_blank"><img src="../images/IG_Logo.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/musiccityaudiology" target="_blank"><img src="../images/FB_Logo.png" alt="Facebook"></a>
+            <a href="https://www.linkedin.com/in/jason-baker-audiology/" target="_blank"><img src="../images/IN_Logo.png" alt="LinkedIn"></a>
+        </div>
+        <div class="spacer"></div>
+    </footer>
+    <script src="./homePage.js"></script>
+    
+</body>
+
+</html>

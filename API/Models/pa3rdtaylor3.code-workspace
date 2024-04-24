@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../../pa3rdtaylor3"
+		},
+		{
+			"path": "../.."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "MCA-Project-Group-9"
+	}
+}

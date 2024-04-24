@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music City Audiology</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="icon" type="image/x-icon" href="../images/MCALogo.png">
+</head>
+
+<body onload="onsigninPageLoad()">
+    <div class="container-header">
+        <h1>
+            <ul>
+                <li><a href="../pages/homePage.html">Home</a></li>
+                <li><a href="../pages/FAQPage.html">FAQs</a></li>
+                <div class="spacer"></div> <!-- Spacer div -->
+                <h1>Music City Audiology</h1> <!-- Header text between Contact Us and Scheduling -->
+                <div class="spacer"></div> <!-- Spacer div -->
+                <li><a href="../pages/scheduling.html">Scheduling</a></li>
+                <li><a href="../signin.html">Sign In</a></li>
+            </ul>
+        </h1>
+    </div>
+    <div class="login-form">
+        <h2>Sign in</h2>
+        <form id="signInForm" action="http://localhost:5190/api/SignIn" method="POST">
+            <!-- Make sure the action points to the server endpoint -->
+            <input type="email" id="email" name="email" placeholder="Email (Required)" required>
+            <input id="password" name="password" type="password" placeholder="Password (Required)" required>
+            <div class="showPasswordContainer">
+                <div class="showPasswordText">
+                    Toggle Show Password &nbsp;
+                </div>
+                <div class="eyeIcon">
+                    <img id="notVisible" src="../images/notvisible.png" alt="password hidden">
+                </div>
+            </div>
+            <button type="button" onclick="signIn(event)">Sign In</button>
+            <br>
+            <button id="myButton" class="float-left submit-button">Create an Account</button>
+            <script type="text/javascript">
+                document.getElementById("myButton").onclick = function () {
+                    window.location.href = "./signUpPage.html";
+                };
+            </script>
+            <br>
+            <a href="./forgotpassword.html">Forgot Password</a>
+        </form>
+        <br>
+        <details>
+            <summary>Help! How do I make an account/sign in?</summary>
+            <p>Creating an account:</p>
+            <ol>
+                <li>Enter your email address</li>
+                <li>Choose a password at least 8 characters long</li>
+                <li>Click "sign up" to create your account</li>
+            </ol>
+            <br>
+            <p>Logging in:</p>
+            <ol>
+                <li>Enter your email address</li>
+                <li>Enter the password you chose upon creating your account</li>
+                <li>Click sign in!</li>
+            </ol>
+            <br>
+            <p>If you forgot your password, you can click the "forgot password" button, which will prompt you to enter
+                the email you used to sign up for your account</p>
+        </details>
+        <br>
+    </div>
+    <footer class="container-footer">
+        <div class="footer-social">
+            <h1>Check Out Our Socials!</h1>
+            <a href="https://www.instagram.com/musiccityaudiology/?igshid=YmMyMTA2M2Y%3D" target="_blank"><img
+                    src="../images/IG_Logo.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/musiccityaudiology" target="_blank"><img src="../images/FB_Logo.png"
+                    alt="Facebook"></a>
+            <a href="https://www.linkedin.com/in/jason-baker-audiology/" target="_blank"><img
+                    src="../images/IN_Logo.png" alt="LinkedIn"></a>
+        </div>
+        <div class="spacer"></div>
+    </footer>
+    <!-- Include script file for signing in -->
+    <script>
+        let eyeIcon = document.getElementById("notVisible");
+        let password = document.getElementById("password");
+
+        eyeIcon.onclick = function () {
+            if (password.type == "password") {
+                password.type = "text";
+                eyeIcon.src = "../images/visible.png"
+            } else {
+                password.type = "password";
+                eyeIcon.src = "../images/notvisible.png"
+            }
+        }
+    </script>
+    <script src="signinpageindex.js"></script>
+</body>
+
+</html>
