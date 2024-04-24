@@ -1,2 +1,2 @@
-# MCA-Project-Group-9
-This is where you can upload and share your changes to the MCA Website group project
+Need dotnet 8.0 to run API
+mcaPrototype folder contains page source
